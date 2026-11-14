@@ -8,9 +8,6 @@
 
 TwinPhish spins up a disposable Firefox container behind noVNC, exposes it through a Cloudflare Quick Tunnel, and wraps the whole remote desktop inside a pixel-perfect fake browser window. The target believes they are typing into a native Google sign-in popup; in reality they are driving a remote Firefox in kiosk mode while the operator watches the same session.
 
-> **EDUCATIONAL AND AUTHORIZED TESTING USE ONLY.**
-> This project exists to demonstrate and research two publicly documented phishing techniques. It is intended strictly for use in controlled lab environments, security awareness training, and engagements where you have **explicit written permission** from the system owner. Running this against anyone without consent is illegal in most jurisdictions and is not condoned by the author. You are solely responsible for how you use this code.
-
 ---
 
 ## Table of contents
