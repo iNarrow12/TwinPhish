@@ -410,6 +410,8 @@ The script sends:
 
 Install it in the kiosk browser through Tampermonkey and adjust `LISTENER_URL` if your Docker network uses a different gateway.
 
+> i am still working on keystroke capture part
+
 ---
 
 ## How it works
