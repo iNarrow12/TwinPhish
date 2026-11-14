@@ -186,7 +186,7 @@ The BitB layer supplies the **visual trust** ("the URL says Google"). The noVNC 
 | Docker Engine | The backend container needs a working Docker daemon. |
 | `jlesage/firefox` image | Pulled automatically on first run if absent. |
 | `cloudflared` | Required for `-tun/--tunnel`. Must be in `PATH` or a common install path. |
-| `rich` (Python package) | Used by `novnc/app.py` for terminal output. Install with `pip install rich`. |
+| `rich` (Python package) | Used by `novnc/app.py` for terminal output. Listed in `requirements.txt`. |
 | Port 80 free (default) | The default host port is 80, which may require root or sudo. |
 | Internet access | Needed to reach the target login site from inside the container and to create the tunnel. |
 
@@ -205,7 +205,7 @@ cd TwinPhish
 
 python3 -m venv .venv
 source .venv/bin/activate
-pip install rich
+pip install -r requirements.txt
 
 # Verify prerequisites
 docker info
@@ -412,6 +412,7 @@ Install it in the kiosk browser through Tampermonkey and adjust `LISTENER_URL` i
 TwinPhish/
 ├── run.py                    # Orchestrator: forwards to app.py or runs BitB mode
 ├── README.md
+├── requirements.txt          # Python dependencies (rich)
 ├── bitb/
 │   ├── attacker_index.html   # Decoy landing page ("secure document")
 │   ├── bitb_payload.css      # Fake Chrome window styling
