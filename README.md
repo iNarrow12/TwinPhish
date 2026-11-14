@@ -526,20 +526,6 @@ rm -f /docker/appdata/firefox/user.js
 
 `Ctrl+C` in `run.py` terminates the backend and attempts `app.py stop -y`. A Cloudflare Quick Tunnel is ephemeral and closes with the process.
 
----
-
-## Limitations
-
-- **Single session per instance.** All visitors share the same Firefox profile and VNC session. mr.d0x's multi-session approach is not implemented here.
-- **No per-target isolation.** Cookies and history persist between visitors unless the profile is reset.
-- **Cloudflare Quick Tunnel URLs are random and short-lived.** They are convenient for demos, not for stable infrastructure.
-- **Port 80 default may require privileges.** Use `-p` to map an unprivileged host port.
-- **Mobile emulation is cosmetic.** It changes viewport and User-Agent, not device fingerprint or rendering engine.
-- **The BitB window is only as convincing as the template.** Differences in fonts, scaling, and OS window chrome can reveal it under scrutiny.
-- **No anti-bot or filter evasion.** Modern browsers, EDR, and secure web gateways may flag or block the tunnel domain or the noVNC canvas.
-- **The keystroke listener is unauthenticated and plaintext.** It is a lab tool, not a hardened collection service.
-- **The `--script` option is declared but not wired into deployment.** Inject userscripts manually for now.
-
 ## Legal and ethical notice
 
 This software is provided for **educational purposes, security research, and authorized red-team engagements only**.
