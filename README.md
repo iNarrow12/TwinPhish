@@ -1,5 +1,11 @@
 # TwinPhish
 
+<div align="center">
+  
+![header](https://github.com/iNarrow12/TwinPhish/blob/main/src/logo.png)
+
+</div>
+
 **A dual-vector phishing proof-of-concept that chains mr.d0x's Browser-in-the-Browser (BitB) attack with his noVNC 2FA-bypass technique.**
 
 TwinPhish spins up a disposable Firefox container behind noVNC, exposes it through a Cloudflare Quick Tunnel, and wraps the whole remote desktop inside a pixel-perfect fake browser window. The target believes they are typing into a native Google sign-in popup; in reality they are driving a remote Firefox in kiosk mode while the operator watches the same session.
