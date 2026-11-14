@@ -1,5 +1,3 @@
-# TwinPhish
-
 <div align="center">
   
 ![header](https://github.com/iNarrow12/TwinPhish/blob/main/src/logo.png)
@@ -572,9 +570,3 @@ TwinPhish is an independent proof-of-concept and is not affiliated with or endor
 3. noVNC documentation. <https://novnc.com/info.html>
 4. Cloudflare, "TryCloudflare". <https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/>
 5. fhlipZero, "noVNC phishing write-up". <https://fhlipzero.io/blogs/6_noVNC/noVNC.html>
-
----
-
-## License
-
-No license is granted for malicious use. Add a license of your choice (for example MIT or BSD-3-Clause) if you intend to redistribute this code for legitimate research or training. The disclaimer above takes precedence over any permissive terms.
