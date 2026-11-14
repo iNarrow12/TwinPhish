@@ -37,7 +37,6 @@ TwinPhish spins up a disposable Firefox container behind noVNC, exposes it throu
 - [Legal and ethical notice](#legal-and-ethical-notice)
 - [Credits](#credits)
 - [References](#references)
-- [License](#license)
 
 ---
 
@@ -540,22 +539,6 @@ rm -f /docker/appdata/firefox/user.js
 - **No anti-bot or filter evasion.** Modern browsers, EDR, and secure web gateways may flag or block the tunnel domain or the noVNC canvas.
 - **The keystroke listener is unauthenticated and plaintext.** It is a lab tool, not a hardened collection service.
 - **The `--script` option is declared but not wired into deployment.** Inject userscripts manually for now.
-
----
-
-## Detection and mitigation
-
-This section exists so defenders can recognize the technique.
-
-- **Look beyond the rendered URL bar.** Open the real browser chrome, inspect the page source, or check the top-level origin. A login form rendered inside an iframe with a canvas is suspicious.
-- **Detect noVNC/RFB traffic.** WebSocket upgrades with `Sec-WebSocket-Protocol: binary` to endpoints such as `/websockify`, plus large binary frames, are characteristic.
-- **Fingerprint canvas-based remote desktops.** Cross-origin iframes backed by `<canvas>` without normal DOM form elements are a signal.
-- **Block or log `trycloudflare.com` and other quick-tunnel domains.** Enterprise proxies should treat them as untrusted by default.
-- **Enforce phishing-resistant MFA.** Passkeys/WebAuthn bound to the legitimate origin defeat relayed or remote-session credential capture, including this one.
-- **Restrict browser popups and cross-origin iframes** where policy allows.
-- **User awareness:** a padlock and a domain inside a page are not proof of origin. Teach users to open the site directly rather than through links.
-
----
 
 ## Legal and ethical notice
 
