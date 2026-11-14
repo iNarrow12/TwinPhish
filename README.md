@@ -1,6 +1,6 @@
 <div align="center">
   
-![header](https://github.com/iNarrow12/TwinPhish/blob/main/src/logo.png)
+![header](src/logo.png)
 
 </div>
 
@@ -13,6 +13,7 @@ TwinPhish spins up a disposable Firefox container behind noVNC, exposes it throu
 ## Table of contents
 
 - [Overview](#overview)
+- [Screenshots](#screenshots)
 - [The two concepts](#the-two-concepts)
   - [1. Browser-in-the-Browser (BitB)](#1-browser-in-the-browser-bitb)
   - [2. Credential theft and 2FA bypass with noVNC](#2-credential-theft-and-2fa-bypass-with-novnc)
@@ -37,6 +38,22 @@ TwinPhish spins up a disposable Firefox container behind noVNC, exposes it throu
 - [Credits](#credits)
 - [References](#references)
 - [License](#license)
+
+---
+
+## Screenshots
+
+The decoy page the target lands on:
+
+<img src="src/bitb_page.png" alt="BitB decoy page" width="720">
+
+The fake browser window with the live noVNC session underneath:
+
+<img src="src/bitb_with_novnc.png" alt="BitB window with noVNC session" width="720">
+
+noVNC only, without the BitB layer:
+
+<img src="src/google_only_phish.png" alt="noVNC-only Google login" width="720">
 
 ---
 
@@ -414,6 +431,11 @@ TwinPhish/
 ├── run.py                    # Orchestrator: forwards to app.py or runs BitB mode
 ├── README.md
 ├── requirements.txt          # Python dependencies (rich)
+├── src/
+│   ├── logo.png              # Repository logo
+│   ├── bitb_page.png         # Screenshot: decoy page
+│   ├── bitb_with_novnc.png   # Screenshot: BitB window + noVNC
+│   └── google_only_phish.png # Screenshot: noVNC-only login
 ├── bitb/
 │   ├── attacker_index.html   # Decoy landing page ("secure document")
 │   ├── bitb_payload.css      # Fake Chrome window styling
