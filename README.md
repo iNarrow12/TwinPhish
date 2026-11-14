@@ -570,8 +570,4 @@ TwinPhish is an independent proof-of-concept and is not affiliated with or endor
 
 ## License
 
-<<<<<<< HEAD
 No license is granted for malicious use. Add a license of your choice (for example MIT or BSD-3-Clause) if you intend to redistribute this code for legitimate research or training. The disclaimer above takes precedence over any permissive terms.
-=======
-No license is granted for malicious use. Add a license of your choice (for example MIT or BSD-3-Clause) if you intend to redistribute this code for legitimate research or training. The disclaimer above takes precedence over any permissive terms.
->>>>>>> 877f4b4b0b77fdab727eb79567cd36f91c8cf18b
